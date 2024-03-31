@@ -7,20 +7,26 @@
 
 /* 基础样式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s ease;
 }
 
+/* 容器 */
 .container {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
 }
 
-/* 菜单栏样式 */
+/* 菜单栏 */
 .menu-bar {
     flex: 1;
     max-width: 200px;
-    background-color: #f2f2f2;
+    background-color: #3498db;
+    color: #fff;
     padding: 10px;
     transition: all 0.3s ease;
 }
@@ -31,47 +37,69 @@ body {
 
 .menu-bar a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     display: block;
     padding: 8px;
     transition: background-color 0.3s;
 }
 
 .menu-bar a:hover {
-    background-color: #ddd;
+    background-color: #2980b9;
 }
 
-/* 主内容区样式 */
+/* 主内容区 */
 .content {
     flex: 3;
     padding: 20px;
-    min-width: 300px; /* 确保内容区域在小屏幕上也能显示 */
+    min-width: 300px;
+}
+
+.content h1 {
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content h2, .content h3, .content h4 {
+    color: #2c3e50;
 }
 
 .content article {
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    padding: 15px;
 }
 
-/* 音乐播放器样式 */
+.content article:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.content time {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #7f8c8d;
+}
+
+/* 音乐播放器 */
 .music-player {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    background-color: #f2f2f2;
+    background-color: #3498db;
+    color: #fff;
     padding: 10px;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    z-index: 1000; /* 确保播放器在最上层 */
+    z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
-/* 标题样式 */
-h1, h2, h3, h4 {
-    color: #333;
-    margin-bottom: 10px;
+.music-player:hover {
+    transform: scale(1.05);
 }
 
 /* 响应式布局样式 */
@@ -82,25 +110,26 @@ h1, h2, h3, h4 {
 
     .menu-bar {
         max-width: 100%;
-        order: -1; /* 将菜单栏放在内容之上 */
+        order: -1;
     }
 
     .content {
         flex: auto;
     }
-
-    .music-player {
-        position: relative; /* 在小屏幕上，播放器不再固定在右下角 */
-    }
 }
 
-/* 在小于600px的屏幕上进一步调整样式 */
-@media (max-width: 600px) {
-    .menu-bar {
-        padding: 5px;
-    }
+/* 鼠标悬停效果 */
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
-    .content article {
-        padding: 10px;
-    }
+/* 文章内容的动态效果 */
+.content p {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.content p:hover {
+    opacity: 1;
 }
