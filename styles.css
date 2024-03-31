@@ -102,6 +102,22 @@ body {
     transform: scale(1.05);
 }
 
+/* 文章中的图片样式 */
+.content article img {
+    display: block; /* 使图片独占一行 */
+    max-width: 100%; /* 限制图片的最大宽度为容器的宽度 */
+    height: auto; /* 设置高度自动，保持图片的原始宽高比 */
+    object-fit: cover; /* 裁剪图片以填充容器，保持宽高比 */
+    border-radius: 5px; /* 为图片添加圆角 */
+    margin: 10px 0; /* 在图片上方和下方添加一些外边距 */
+}
+
+/* 如果需要图片不裁剪，而是完整显示在容器内，可以将object-fit属性改为contain */
+.content article img {
+    object-fit: contain;
+}
+
+
 /* 响应式布局样式 */
 @media (max-width: 768px) {
     .container {
