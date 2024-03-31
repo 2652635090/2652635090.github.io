@@ -5,17 +5,24 @@
     box-sizing: border-box;
 }
 
-/* 容器 */
+/* 基础样式 */
+body {
+    font-family: Arial, sans-serif;
+}
+
 .container {
     display: flex;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
-/* 菜单栏 */
+/* 菜单栏样式 */
 .menu-bar {
-    width: 200px;
+    flex: 1;
+    max-width: 200px;
     background-color: #f2f2f2;
     padding: 10px;
+    transition: all 0.3s ease;
 }
 
 .menu-bar ul {
@@ -34,20 +41,20 @@
     background-color: #ddd;
 }
 
-/* 主内容区 */
+/* 主内容区样式 */
 .content {
-    flex: 1;
+    flex: 3;
     padding: 20px;
+    min-width: 300px; /* 确保内容区域在小屏幕上也能显示 */
 }
 
-/* 文章记录样式 */
-article {
+.content article {
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
 }
 
-/* 音乐播放器 */
+/* 音乐播放器样式 */
 .music-player {
     position: fixed;
     right: 20px;
@@ -58,14 +65,42 @@ article {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.music-player audio {
-    flex: 1;
+    z-index: 1000; /* 确保播放器在最上层 */
 }
 
 /* 标题样式 */
 h1, h2, h3, h4 {
     color: #333;
     margin-bottom: 10px;
+}
+
+/* 响应式布局样式 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu-bar {
+        max-width: 100%;
+        order: -1; /* 将菜单栏放在内容之上 */
+    }
+
+    .content {
+        flex: auto;
+    }
+
+    .music-player {
+        position: relative; /* 在小屏幕上，播放器不再固定在右下角 */
+    }
+}
+
+/* 在小于600px的屏幕上进一步调整样式 */
+@media (max-width: 600px) {
+    .menu-bar {
+        padding: 5px;
+    }
+
+    .content article {
+        padding: 10px;
+    }
 }
