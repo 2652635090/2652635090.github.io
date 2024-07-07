@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const organizations = [
         // 第一个组织的信息
         {
+            name: "ICJ主组织",
+            founded: "2023-6-7",
+            resources: "百万/人",
+            description: "mcpe和2c2s霸主",
+            achievements: "未统计",
+            leaders: "未统计",
+            contact: "详情见ICJ联盟宪法"
+        },
+
+
+        {
             name: "LIME无限",
             founded: "2023-6",
             resources: "约10万",
@@ -49,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             resources: "Emeralds, Redstone, Lapis Lazuli",
             description: "The Alliance is a coalition of smaller factions, working together for mutual benefit.",
             achievements: "Developed advanced redstone contraptions, created a peaceful trading hub.",
-            leaders: "Leader X, Leader Y",
+            leaders: "Leader X",
             contact: "discord.gg/thealliance"
         }
         // 可以继续添加更多组织的信息...
