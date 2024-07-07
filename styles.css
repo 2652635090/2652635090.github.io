@@ -1,15 +1,26 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
+    box-sizing: border-box;
 }
 
-h1 {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    color: #007bff;
-    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
 }
 
 #organizations-container {
@@ -63,4 +74,8 @@ h1 {
 
 .organization .contact a:hover {
     text-decoration: underline;
+}
+
+footer {
+    margin-top: 20px;
 }
