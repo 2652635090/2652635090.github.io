@@ -1,33 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
 h1 {
-    color: #333;
+    text-align: center;
+    color: #007bff;
+    margin: 2rem 0;
 }
 
 #organizations-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 20px;
 }
 
 .organization {
     background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
     width: 300px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.organization:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .organization h2 {
+    color: #007bff;
     margin-top: 0;
 }
 
 .organization p {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.organization .info {
+    margin-bottom: 15px;
+}
+
+.organization .info:last-child {
+    margin-bottom: 0;
+}
+
+.organization .info span {
+    font-weight: bold;
+}
+
+.organization .contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.organization .contact a:hover {
+    text-decoration: underline;
 }
