@@ -1,81 +1,99 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* 基础样式 */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
+     font-family: 'Arial', sans-serif;
+     background-color: #f7f7f7;
+     color: #333;
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
 }
 
 header, footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     padding: 1rem 0;
 }
 
 header h1 {
-    margin: 0;
+     margin: 0;
 }
 
 #organizations-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     padding: 20px;
 }
 
 .organization {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    padding: 20px;
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
+     background-color: #fff;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     margin: 15px;
+     padding: 20px;
+     width: 300px;
+     transition: transform 0.3s ease-in-out;
 }
 
 .organization:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+     transform: translateY(-10px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .organization h2 {
-    color: #007bff;
-    margin-top: 0;
+     color: #007bff;
+     margin-top: 0;
 }
 
 .organization p {
-    font-size: 15px;
-    line-height: 1.6;
+     font-size: 15px;
+     line-height: 1.6;
 }
 
 .organization .info {
-    margin-bottom: 15px;
+     margin-bottom: 15px;
 }
 
 .organization .info:last-child {
-    margin-bottom: 0;
+     margin-bottom: 0;
 }
 
 .organization .info span {
-    font-weight: bold;
+     font-weight: bold;
 }
 
 .organization .contact a {
-    color: #007bff;
-    text-decoration: none;
+     color: #007bff;
+     text-decoration: none;
 }
 
 .organization .contact a:hover {
-    text-decoration: underline;
+     text-decoration: underline;
 }
 
 footer {
-    margin-top: 20px;
+     margin-top: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 767px) {
+     /* 小屏幕样式 */
+     .organization {
+         width: 100%;
+     }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+     /* 中等屏幕样式 */
+     .organization {
+         width: calc(50% - 30px); /* 两个组织卡片并排 */
+     }
+}
+
+@media (min-width: 992px) {
+     /* 大屏幕样式 */
+     .organization {
+         width: calc(33.333% - 30px); /* 三个组织卡片并排 */
+     }
 }
