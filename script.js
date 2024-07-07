@@ -52,6 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
             leaders: "未知",
             contact: "未知"
         },
+        {
+            name: "AEH",
+            founded: "未知",
+            resources: "未知",
+            description: "暂无",
+            achievements: "未知",
+            leaders: "未知",
+            contact: "未知"
+        },
+
 
         // 第二个组织的信息
         {
