@@ -1,16 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     const organizationsContainer = document.getElementById('organizations-container');
     const organizations = [
+        // 第一个组织的信息
         {
-            name: "LIME无限",
-            founded: "2023/6/？？",
-            resources: "约1万",
-            description: "组织长期收萌新，组织不给萌新提供任何长期帮助，但会提供游戏教程和非利益性帮助。",
-            achievements: "无",
-            leaders: "lml1123",
-            contact: "QQ群：980966086"
+            name: "The Empire",
+            founded: "2015-06-01",
+            resources: "Diamonds, Gold, Iron",
+            description: "The Empire is a powerful organization that controls vast lands on the server.",
+            achievements: "Conquered multiple regions, established trade routes.",
+            leaders: "Emperor Alex, General Luna",
+            contact: "discord.gg/theempire"
         },
-        // Add more organizations here...
+        // 第二个组织的信息
+        {
+            name: "The Alliance",
+            founded: "2016-02-15",
+            resources: "Emeralds, Redstone, Lapis Lazuli",
+            description: "The Alliance is a coalition of smaller factions, working together for mutual benefit.",
+            achievements: "Developed advanced redstone contraptions, created a peaceful trading hub.",
+            leaders: "Leader X, Leader Y",
+            contact: "discord.gg/thealliance"
+        }
+        // 可以继续添加更多组织的信息...
     ];
 
     organizations.forEach(org => {
@@ -18,14 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
         orgDiv.className = 'organization';
         orgDiv.innerHTML = `
             <h2>${org.name}</h2>
-            <p><strong>Founded:</strong> ${org.founded}</p>
-            <p><strong>Resources:</strong> ${org.resources}</p>
+            <div class="info">
+                <strong>Founded:</strong> ${org.founded}<br>
+                <strong>Resources:</strong> ${org.resources}
+            </div>
             <p>${org.description}</p>
-            <p><strong>Achievements:</strong> ${org.achievements}</p>
-            <p><strong>Leaders:</strong> ${org.leaders}</p>
-            <p><strong>Contact:</strong> <a href="https://${org.contact}">${org.contact}</a></p>
+            <div class="info">
+                <strong>Achievements:</strong> ${org.achievements}
+            </div>
+            <div class="info">
+                <strong>Leaders:</strong> ${org.leaders}
+            </div>
+            <div class="contact">
+                <strong>Contact:</strong> <a href="https://${org.contact}">${org.contact}</a>
+            </div>
         `;
         organizationsContainer.appendChild(orgDiv);
     });
 });
-
