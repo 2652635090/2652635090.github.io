@@ -3,43 +3,43 @@ document.addEventListener('DOMContentLoaded', function() {
     const organizations = [
         // 第一个组织的信息
         {
-            名称: "LIME无限",
-            建立日期: "2023-6",
-            资源数量: "约10万",
-            组织描述: "组织长期招收萌新，为萌新提供最基础游戏教学。",
-            过往成就: "建造基地",
-            核心成员: "lml1123",
-            联系QQ群: "980966086"
+            name: "LIME无限",
+            founded: "2023-6",
+            resources: "约10万",
+            description: "组织长期招收萌新，为萌新提供最基础游戏教学。",
+            achievements: "建造基地",
+            leaders: "lml1123",
+            contact: "980966086"
         },
 
         {
-            组织名称: "BTR-天合/BTR-Trina",
-            建立日期: "2023-10-20",
-            资源数量: "约30亿",
-            组织描述: "ICJ分组织，人少，有意者联系高层，别找首领",
-            过往成就: "保密",
-            核心成员: "ThreeNine27，WXH88688，Wendichu，BTRBitJekv44，duepie23等",
-            联系方式: "保密"
+            name: "BTR-天合/BTR-Trina",
+            founded: "2023-10-20",
+            resources: "约30亿",
+            description: "ICJ分组织，人少，有意者联系高层，别找首领",
+            achievements: "保密",
+            leaders: "ThreeNine27，WXH88688，Wendichu，BTRBitJekv44，duepie23等",
+            contact: "保密"
         },
 
         {
-            组织名称: "TRE",
-            建立日期: "未知",
-            资源数量: "约500亿",
-            组织描述: "TRE组织是《我的世界》2B2Tmcpe.org和tk服务器中一个实力强大的玩家团体，以高效收集资源和建造壮观基地著称。他们不仅在游戏内拥有强大的物资储备和战略要地，还通过紧密的社区合作和积极的社区贡献，巩固了其在2B2Tmcpe服务器玩家中的传奇地位。",
-            过往成就: "拷打成员",
-            核心成员: "HorridPark15077",
-            联系QQ群: "962549754"
+            name: "TRE",
+            founded: "未知",
+            resources: "约500亿",
+            description: "TRE组织是《我的世界》2B2Tmcpe.org和tk服务器中一个实力强大的玩家团体，以高效收集资源和建造壮观基地著称。他们不仅在游戏内拥有强大的物资储备和战略要地，还通过紧密的社区合作和积极的社区贡献，巩固了其在2B2Tmcpe服务器玩家中的传奇地位。",
+            achievements: "拷打成员",
+            leaders: "HorridPark15077",
+            contact: "962549754"
         },
 
         {
-            组织名称: "UST",
-            建立日期: "未知",
-            资源数量: "未知",
-            组织描述: "暂无",
-            过往成就: "未知",
-            核心成员: "未知",
-            联系方式: "未知"
+            name: "UST",
+            founded: "未知",
+            resources: "未知",
+            description: "暂无",
+            achievements: "未知",
+            leaders: "未知",
+            contact: "未知"
         },
 
         // 第二个组织的信息
