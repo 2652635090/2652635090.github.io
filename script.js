@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         {
             name: "TRE",
-            founded: "未知",
+            founded: "0001-1-1",
             resources: "约500亿",
-            description: "TRE组织是《我的世界》2B2Tmcpe.org和tk服务器中一个实力强大的玩家团体，以高效收集资源和建造壮观基地著称。他们不仅在游戏内拥有强大的物资储备和战略要地，还通过紧密的社区合作和积极的社区贡献，巩固了其在2B2Tmcpe服务器玩家中的传奇地位。",
+            description: "TRE组织招人了无论你是建筑大佬，红石大佬，还是生存大师，或者还是PVP大佬(^.^)，公会内部氛围很好，成员热情有意者+962549754",
             achievements: "拷打成员",
             leaders: "HorridPark15077",
             contact: "962549754"
