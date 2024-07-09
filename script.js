@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         {
+            image:"https://pic.imgdb.cn/item/668cc009d9c307b7e962f08f.jpg"
             name: "BTR-天合/BTR-Trina",
             founded: "2023-10-20",
             resources: "约30亿",
