@@ -7,11 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchValue = this.value.toLowerCase();
         organizationItems.forEach(function(item) {
             const title = item.querySelector('h2').textContent.toLowerCase();
-            if (title.includes(searchValue)) {
-                item.style.display = '';
-            } else {
-                item.style.display = 'none';
-            }
+            const isVisible = title.includes(searchValue);
+            item.style.display = isVisible ? '' : 'none';
         });
     });
 
