@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const organizationsContainer = document.getElementById('organizations-container');
-    const organizations = [
-        // 第一个组织的信息
+     const organizationsContainer = document.getElementById('organizations-container');
+     const organizations = [
+
+         {
+             name: "ICJ主组织",
+             founded: "2023-6-7",
+             resources: "百万/人",
+             description: "mcpe和2c2s霸主",
+             achievements: "未统计",
+             leaders: "未统计",
+             contact: "详情见ICJ联盟宪法",
+             image: "https://pic.imgdb.cn/item/668cc0efd9c307b7e96545f0.png" // 添加图片路径
+         },
         {
             name: "ICJ主组织",
             founded: "2023-6-7",
@@ -10,9 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
             achievements: "未统计",
             leaders: "未统计",
             contact: "详情见ICJ联盟宪法"
+            image: "https://pic.imgdb.cn/item/668cc0efd9c307b7e96545f0.png" // 添加图片路径
         },
-
-
         {
             name: "LIME无限",
             founded: "2023-6",
@@ -21,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             achievements: "建造基地",
             leaders: "lml1123",
             contact: "980966086"
+            image: "https://pic.imgdb.cn/item/668cc0efd9c307b7e96545f0.png" // 添加图片路径
         },
 
         {
@@ -31,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             achievements: "保密",
             leaders: "ThreeNine27，WXH88688，Wendichu，BTRBitJekv44，duepie23等",
             contact: "保密"
+            image: "https://pic.imgdb.cn/item/668cc009d9c307b7e962f08f.jpg" // 添加图片路径
         },
 
         {
@@ -41,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             achievements: "拷打成员",
             leaders: "HorridPark15077",
             contact: "962549754"
+            image: "https://pic.imgdb.cn/item/668cc0efd9c307b7e96545f0.png" // 添加图片路径
         },
 
         {
@@ -51,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             achievements: "未知",
             leaders: "未知",
             contact: "未知"
+            image: "https://pic.imgdb.cn/item/668cc0efd9c307b7e96545f0.png" // 添加图片路径
         },
         {
             name: "AEH",
@@ -60,42 +73,32 @@ document.addEventListener('DOMContentLoaded', function() {
             achievements: "未知",
             leaders: "未知",
             contact: "未知"
+            image: "https://pic.imgdb.cn/item/668cc0efd9c307b7e96545f0.png" // 添加图片路径
         },
+         // ... 其他组织的信息
+     ];
 
-
-        // 第二个组织的信息
-        {
-            name: "The Alliance",
-            founded: "2016-02-15",
-            resources: "Emeralds, Redstone, Lapis Lazuli",
-            description: "The Alliance is a coalition of smaller factions, working together for mutual benefit.",
-            achievements: "Developed advanced redstone contraptions, created a peaceful trading hub.",
-            leaders: "Leader X",
-            contact: "discord.gg/thealliance"
-        }
-        // 可以继续添加更多组织的信息...
-    ];
-
-    organizations.forEach(org => {
-        const orgDiv = document.createElement('div');
-        orgDiv.className = 'organization';
-        orgDiv.innerHTML = `
-            <h2>${org.name}</h2>
-            <div class="info">
-                <strong>Founded:</strong> ${org.founded}<br>
-                <strong>Resources:</strong> ${org.resources}
-            </div>
-            <p>${org.description}</p>
-            <div class="info">
-                <strong>Achievements:</strong> ${org.achievements}
-            </div>
-            <div class="info">
-                <strong>Leaders:</strong> ${org.leaders}
-            </div>
-            <div class="contact">
-                <strong>Contact:</strong> <a href="https://${org.contact}">${org.contact}</a>
-            </div>
-        `;
-        organizationsContainer.appendChild(orgDiv);
-    });
+     organizations.forEach(org => {
+         const orgDiv = document.createElement('div');
+         orgDiv.className = 'organization';
+         orgDiv.innerHTML = `
+             <h2>${org.name}</h2>
+             <div class="info">
+                 <strong>Founded:</strong> ${org.founded}<br>
+                 <strong>Resources:</strong> ${org.resources}
+             </div>
+             <img src="${org.image}" alt="${org.name} logo" class="org-image">
+             <p>${org.description}</p>
+             <div class="info">
+                 <strong>Achievements:</strong> ${org.achievements}
+             </div>
+             <div class="info">
+                 <strong>Leaders:</strong> ${org.leaders}
+             </div>
+             <div class="contact">
+                 <strong>Contact:</strong> <a href="https://${org.contact}">${org.contact}</a>
+             </div>
+         `;
+         organizationsContainer.appendChild(orgDiv);
+     });
 });
